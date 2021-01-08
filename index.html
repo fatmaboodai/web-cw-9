@@ -11,12 +11,13 @@
   <!-- Bootstrap قالب -->
   <link rel="stylesheet" href="./assets/css/bootstrap-sketchy.css">
   <!-- font-awesome مكتبة -->
+  <script src="https://kit.fontawesome.com/5cff7069f0.js" crossorigin="anonymous"></script>
   <!-- قم باستيراد مكتبة font-awesome هنا أو أي مكتبة متاحة لأيقونات التحميل -->
   <title>Cookie Factory</title>
 </head>
 
-<!-- <body onload="myFunction()"> -->
-<!-- <div id="page" style="display:none;"> -->
+<body onload="myFunction()"> 
+ <div id="page" style="display:none;">
 <div id="sidebar">
   <img src="assets/img/cookies.png" class="logo" alt="website logo" />
   <h3>Cookie<br>Factory</h3>
@@ -24,9 +25,9 @@
     <h4 class="menu-item">
       <a href="./index.html">Cookies</a>
       <br></br>
-      <a href="">Add a Cookie</a>
+      <a href="./form.html">Add a Cookie</a>
       <br></br>
-      <a href="">See my Cart</a>
+      <a href="./checkout.html">See my Cart</a>
     </h4>
   </section>
 </div>
@@ -41,7 +42,9 @@
         <h5 class="card-title">
           <span>Creme Brulee Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <input value="0" id="0" type="number"/>
+        <button onclick="myCart(0)" type="button" class="btn btn-primary">Add to Cart</button>
+        
       </div>
     </div>
   </div>
@@ -54,7 +57,9 @@
         <h5 class="card-title">
           <span>White Choco Orea Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <input value="0" id="1" type="number"/>
+        <button onclick="myCart(1)" type="button" class="btn btn-primary">Add to Cart</button>
+        
       </div>
     </div>
   </div>
@@ -67,19 +72,31 @@
         <h5 class="card-title">
           <span>Mixed Dates Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <input value="0" id="2" type="number"/>
+        <button onclick="myCart(2)"  type="button" class="btn btn-primary">Add to Cart</button>
       </div>
     </div>
-  </div>
+  </div>  
 </div>
+ <ul id="list">
+  <li></li>
+  <li></li>
+  <li></li>
+      </ul>
+      <h4>Total</h4>
+      <h2 id="total">0 KD</h2>  
 </div>
 <!-- بونص 👑 -->
 <div id="loader">
+
+  <i class="fas fa-spinner"></i>
   <!-- قم بإضافة أيقونة التحميل هنا -->
+
 </div>
 <script>
+ 
     // كود اختبار أيقونة التحميل
-  /*
+  
   let myVar;
   function myFunction() {
     myVar = setTimeout(showPage, 3000);
@@ -88,7 +105,10 @@
     document.getElementById("loader").style.display = "none";
     document.getElementById("page").style.display = "block";
   }
-  */
+</script>
+
+  <script src="./cookie.js">
+ 
 </script>
 </body>
 
